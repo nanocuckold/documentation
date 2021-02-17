@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentation</title>
+    <script src="https://kit.fontawesome.com/299e63a267.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <nav id="navbar">
+        <header>C# Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nev-link" href="#What you should already know">What you should already know</a>
+            </li>
+            <li>
+                <a class="nev-link" href="#C, C++ and C#">C, C++ and C#</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Hello World" >How to write "Hello World"</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variables">Variables</a> 
+            </li>
+            <li>
+                <a class="nav-link" href="#Declaring variables">Declaring variables</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variable scope">Variable scope</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Global Variables">Global Variables</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Constants">Constants</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Data types">Data types</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#if...else statement">if...else statement</a>   
+            </li>
+            <li>
+                <a class="nav-link" href="#For Statement">For Statement</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#While statement">while statement</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Function declarations">Function declarations</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Reference">Reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    C#  is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.
+                </p>
+                <p>
+                    C# was developed around 2000 by Microsoft as part of its .NET initiative and later approved as an international standard by Ecma (ECMA-334) in 2002 and ISO (ISO/IEC 23270) in 2003. It was designed by Anders Hejlsberg, and its development team is currently led by Mads Torgersen, being one of the programming languages designed for the Common Language Infrastructure (CLI). The most recent version is 9.0, which was released in 2020 in .NET 5.0 and included in Visual Studio 2019 version 16.8.
+                </p>
+                <p>
+                    C # was designed as an application-level programming language for the CLR, and as such depends primarily on the capabilities of the CLR itself. This applies primarily to the C # type system, which reflects the BCL. The presence or absence of certain expressive features of a language is dictated by whether a particular language feature can be translated into the corresponding CLR constructs.
+                </p>
+                <p>
+                    So, with the development of the CLR from version 1.1 to 2.0, C # itself has significantly enriched itself; similar interaction should be expected in the future (however, this pattern was broken with the release of C # 3.0, which is a language extension that does not rely on extensions to the .NET platform). The CLR provides C #, like all other .NET-based languages, many of the features that "classic" programming languages ​​lack. For example, garbage collection is not implemented in C # itself, but is performed by the CLR for programs written in C # in the same way as it is done for programs in VB.NET, J#.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="What you should already know">
+            <header>What you should already know</header>
+            <article>
+               <p>
+                   This guide assumes you have the following basic background:
+               </p>
+               <ul>
+                   <li>
+                    A general understanding of the Internet and the World Wide Web (WWW).
+                   </li>
+                   <li>
+                    Basic knowledge of computer operation
+                   </li>
+                   <li>
+          Some programming experience. If you are new to programming, try one of
+          the tutorials linked on the main page about C#.
+                   </li>
+               </ul> 
+            </article>
+        </section>
+        <section class="main-section" id="C, C++ and C#">
+        <header>C, C++ and C#</header>
+            <article>
+                <h1>C and C++</h1>
+                <p>
+                    C and C ++ are remarkably similar programming languages, though there are still plenty of differences. C #, on the other hand, has more in common with languages ​​like Java. Here’s an easy guide to understanding the differences between C #, C ++, and C.
+                </p>
+                <p>
+                    Object-oriented programming (or OOP) uses a concept called “objects.” An object is an instance of a “class,” or a program-code-template. A class can be made up of data or code procedures (also known as methods).
+                </p>
+                <p>
+                    The original C programming language is not object-oriented, which is the most significant difference between the two. C is what’s called a “procedural” programming language, while C++ is a hybrid language that’s a combination of procedural and object-oriented.
+                </p>
+                <p>
+                    There are other key differences between C and C++.
+                </p>
+                <ul>
+                    <li>
+                        C++ was built as an extension of C, which means it can run most C code. The reverse isn’t true though—C can’t run C++ code.
+                    </li>
+                    <li>
+                        As an object-oriented language, C++ supports polymorphism, encapsulation, and inheritance, while C does not.
+                    </li>
+                    <li>
+                        In C, data and functions are “free entities,” which means you can manipulate them with outside code. Since C++ encapsulates data and functions together into a single object, those data structures and operators are hidden to outside code.
+                    </li>
+                    <li>
+                        C++ uses the namespace, which organizes code into logical groups and to prevent name collisions. Name collisions can occur when your code base includes multiple libraries. C does not use a namespace.
+                    </li>
+                    <li>
+                        C uses functions for input and output, whereas C++ uses objects for input and output.
+                    </li>
+                    <li>
+                        C++ supports reference variables, which C does not. A reference variable is an alias for an already existing variable, used to create a short-hand notation for faster coding.
+                    </li>
+                    <li>
+                        C does not provide error or exception handling, but C++ does.
+                    </li>
+                </ul>
+                <h1>C++ vs. C#</h1>
+                <p>
+                    As a much more modern programming language, C# was designed to work with the current Microsoft .NET framework in both client and web-based applications.
+                </p>
+                <p>
+                    While C++ is an object-oriented language, C# is considered a component-oriented programming language. Object-oriented programming concentrates on the associations between classes that link together into a big binary executable, while component-oriented programming uses exchangeable code modules that work on their own and don’t need you to know their inner workings to use them.
+                </p>
+                <p>
+                    Here are some other major differences between C++ and C#.
+                </p>
+                <ul>
+                    <li>
+                        C++ compiles into machine code, while C# compiles to CLR, which is interpreted by ASP.NET.
+                    </li>
+                    <li>
+                        C++ requires you to handle memory manually, but C# runs in a virtual machine which can automatically handle memory management.
+                    </li>
+                    <li>
+                        C# does not use pointers, while C++ can use pointers anywhere.
+                    </li>
+                    <li>
+                        C++ can be used on any platform, though it was originally designed for Unix-based systems. C# is standardized but is rarely used outside of Windows environments.
+                    </li>
+                    <li>
+                        C++ can create stand-alone and console applications. C# can create a console, Windows, ASP.NET, and mobile applications, but cannot create stand-alone apps.
+                    </li>
+                </ul>
+                <h1>C vs. C#</h1>
+                <p>
+                    While C and C# are technically related to each other, they’re enormously different languages, so there are more differences than similarities between them. Having a background in C can be useful for learning C# because some of the syntaxes are similar; however, C#’s syntax is so forgiving that you could easily learn it without knowing C at all.                    
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Hello World">
+            <header>How to write "Hello World"</header>
+            <article>
+                To get started with writing C#, open the Scratchpad and write your first "Hello world" C# code:
+            </article>
+            <code>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+            </code>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C# has a specific type, which determines the size and layout of the variable's memory the range of values that can be stored within that memory and the set of operations that can be applied to the variable.
+                </p>
+                <p>
+                    The basic value types provided in C# can be categorized as
+                </p>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th style="width:27%;text-align:center;">Type</th>
+                            <th style="text-align:center;">Example</th>
+                        </tr>
+                        <tr>
+                            <td class="the-type">Integral types</td>
+                            <td class="the-other">sbyte, byte, short, ushort, int, uint, long, ulong, and char</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">Floating point types</td>
+                            <td class="the-other">float and double</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">Decimal types</td>
+                            <td class="the-other">decimal</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">Boolean types</td>
+                            <td class="the-other">true or false values, as assigned</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">Nullable types</td>
+                            <td class="the-other">Nullable data types</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    C# also allows defining other value types of variable such as enum and reference types of variables such as class, which we will cover in subsequent chapters.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Declaring variables">
+            <header>Declaring variables</header>
+            <article>
+                <p>
+                    To create a variable, you must specify the type and assign it a value:
+                </p>
+                <code>
+type variableName = value;
+                </code>
+                <h1>Example</h1>
+                <p>Create a variable called name of type string and assign it the value "John":</p>
+                <code>
+string name = "John";
+Console.WriteLine(name);
+                </code>
+                <p>Create a variable called myNum of type int and assign it the value 15:</p>
+                <code>
+int myNum = 15;
+Console.WriteLine(myNum);
+                </code>
+                <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+                <code>
+int myNum;                    
+myNum = 15;
+Console.WriteLine(myNum);
+                </code>
+                <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+              <p>Change the value of myNum to 20:</p>
+              <code>
+int myNum = 15;
+myNum = 20; // myNum is now 20
+Console.WriteLine(myNum);
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Variable scope">
+            <header>Variable scope</header>
+            <article>
+                <p>
+                    When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+                </p>
+                <h1>Method Level</h1>
+                <p>
+                    Variable declared inside a method is a local variable.
+                </p>
+                <h1>Class Level</h1>
+                <p>Variable declared inside a class is a local variable are class member variables.
+                Let us see an example of scope of variables −</p>
+                <h1>Example</h1>
+                <code>
+using System;
+
+namespace Demo {
+   class Program {
+      public int Divide(int num1, int num2) {
+         // local variable in a method
+         int result;
+         result = num1 / num2;
+         return result;
+      }
+      static void Main(string[] args) {
+         // local variable
+         int a = 150;
+         int b = 10;
+         int res;
+         Program p = new Program();
+         res = p.Divide(a, b);
+         Console.WriteLine("Division Result = {0}", res );
+         Console.ReadLine();
+      }
+   }
+}
+                </code>
+                <h1>Output</h1>
+                <code>Division Result = 15</code>
+            </article>
+        </section>
+        <section class="main-section" id="Global Variables">
+            <header>Global Variables</header>
+            <article>
+                <p>
+                    In C# you cannot define true global variables (in the sense that they don't belong to any class).
+
+This being said, the simplest approach that I know to mimic this feature consists in using a static class, as follows:
+                </p>
+                <code>
+public static class Globals
+{
+    public static String FILE_NAME = "Output.txt"; // Modifiable
+    public static readonly String CODE_PREFIX = "US-"; // Unmodifiable
+}
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Constants">
+            <header>Constants</header>
+            <article>
+                <p>Constants are constant values ​​that are known at compile time and do not change at runtime. Constants must be declared with the const modifier. Only C # built-in types (excluding System.Object) can be declared const. User-defined types, including classes, structures, and arrays, cannot be declared const. The readonly modifier allows you to create a class, structure, or array that is initialized once (for example, in a constructor) and cannot be changed later.</p>
+                    <p>C # does not support const methods, properties, or events.</p>
+                    <code>
+class Calendar1
+{
+    public const int Months = 12;
+}
+                    </code>
+            </article>
+        </section>
+        <section class="main-section" id="Data types">
+            <header>Data types</header>
+            <article>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>                              
+                            Type
+                            </th>
+                            <th>
+                            Description
+                            </th>
+                            <th>
+                            Range
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="the-type">byte</td>
+                            <td class="the-other">8-bit unsigned integer</td>
+                            <td class="the-other">0 to 255</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">sbyte</td>
+                            <td class="the-other">8-bit signed integer</td>
+                            <td class="the-other">-128 to 127</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">short</td>
+                            <td class="the-other">16-bit signed integer</td>
+                            <td class="the-other">-32,768 to 32,767	</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">ushort</td>
+                            <td class="the-other">16-bit unsigned integer	</td>
+                            <td class="the-other">0 to 65,535	</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">int</td>
+                            <td class="the-other">32-bit signed integer</td>
+                            <td class="the-other">-2,147,483,648
+                                to
+                                2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">uint</td>
+                            <td class="the-other">32-bit unsigned integer	</td>
+                            <td class="the-other">0 to 4,294,967,295	</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">long</td>
+                            <td class="the-other">64-bit signed integer</td>
+                            <td class="the-other">-9,223,372,036,854,775,808
+                                to
+                                9,223,372,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">ulong</td>
+                            <td class="the-other">64-bit unsigned integer	</td>
+                            <td class="the-other">0 to 18,446,744,073,709,551,615</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">float</td>
+                            <td class="the-other">32-bit Single-precision floating point type	</td>
+                            <td class="the-other">-3.402823e38 to 3.402823e38</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">double	</td>
+                            <td class="the-other">64-bit double-precision floating point type	</td>
+                            <td class="the-other">-1.79769313486232e308 to 1.79769313486232e308	</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">decimal</td>
+                            <td class="the-other">128-bit decimal type for financial and monetary calculations</td>
+                            <td class="the-other">(+ or -)1.0 x 10e-28
+                                to
+                                7.9 x 10e28</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">char</td>
+                            <td class="the-other">16-bit single Unicode character	</td>
+                            <td class="the-other">Any valid character, e.g. a,*, \x0058 (hex), or\u0058 (Unicode)</td>
+                        </tr>
+                        <tr>
+                            <td class="the-type">bool</td>
+                            <td class="the-other">8-bit logical true/false value	</td>
+                            <td class="the-other">True or False</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section class="main-content" id="if...else statement">
+            <header>if...else statement</header>
+            <article>
+                <p>
+                    The if statement determines which statement will be executed when the condition specified by the logical expression is met. The following example sets a bool variable of type condition to true and then tests it with an if statement. The result is The variable is set to true ..
+                </p>
+                <code>
+ bool condition = true;
+
+if (condition)
+{
+    Console.WriteLine("The variable is set to true.");
+}
+else
+{
+    Console.WriteLine("The variable is set to false.");
+}
+                </code>
+                <p>
+                    In an if-else statement, if condition is true, then-statement is executed. If condition is false, the else-statement is executed. Since condition cannot be true and false at the same time, then-statement and else-statement of an if-else statement cannot both be executed. After execution of the then-statement or else-statement, control is transferred to the next statement after the if statement.
+                </p>
+            </article>
+        </section>
+        <section class="main-content" id="For Statement">
+            <header>"For" Statement</header>
+            <article>
+                <p>
+                    The for statement executes a statement or block of statements as long as the specified boolean expression evaluates to true.
+At any time in the for statement block, you can interrupt the loop with a break statement, or move to the next iteration in the loop with the continue statement. You can also exit the for loop with a goto, return, or throw statement.
+                </p>
+                <p>
+                    The for statement defines the sections of the initializer, condition, and iterator:
+                </p>
+                <code>
+ for (initializer; condition; iterator)
+    body
+                </code>
+                <p>
+                    All three sections are optional. The loop body is a statement or statement block.
+                </p>
+                <p>
+                    The following example shows a for statement with all sections defined:
+                </p>
+                <code>
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+                </code>
+            </article>
+        </section>
+        <section class="main-content" id="While statement">
+            <header>while statement</header>
+            <article>
+                <p>
+                    The while statement executes a statement or block of statements as long as the specified boolean expression evaluates to true. Since this expression is evaluated before each execution of the loop, the while loop is executed zero or more times. This is in contrast to a do loop, which runs one to several times.
+                </p>
+                <p>At any point in the while statement block, you can break the loop using the break statement.</p>
+                <p>You can jump directly to evaluating the while expression using the continue statement. If the expression evaluates to true, execution continues from the first statement in the loop. Otherwise, execution continues from the first statement after the loop.</p>
+                <p>You can also exit the while loop with a goto, return, or throw statement.</p>
+                <code>
+int n = 0;
+while (n < 5)
+{
+    Console.WriteLine(n);
+    n++;
+}
+                </code>
+            </article>
+        </section>
+        <section class="main-content" id="Function declarations">
+            <header>Function declarations</header>
+            <article>
+                <p>
+                    A method is a code block that contains a series of statements. A program causes the statements to be executed by calling the method and specifying any required method arguments. In C#, every executed instruction is performed in the context of a method. The Main method is the entry point for every C# application and it's called by the common language runtime (CLR) when the program is started.
+                </p>
+                <h1>Method signatures</h1>
+                <p>Methods are declared in a class, struct, or interface by specifying the access level such as public or private, optional modifiers such as abstract or sealed, the return value, the name of the method, and any method parameters. These parts together are the signature of the method.</p>
+                <div class="alert">
+                    <i class="far fa-exclamation-circle"> Important</i>
+                    <p class="content-p">A return type of a method is not part of the signature of the method for the purposes of method overloading. However, it is part of the signature of the method when determining the compatibility between a delegate and the method that it points to.</p>
+                </div>
+            </article>
+        </section>
+        <section class="main-content" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>All the documentation in this page is taken from <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C# documentation</a>
+                     Microsoft site.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
